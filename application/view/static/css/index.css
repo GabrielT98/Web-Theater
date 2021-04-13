@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    background-image: url("../img/backgroud.jpg");
+    background-size: auto;
+}
+
+h1{
+    color: white;
+    margin-left: 400px;
+}
+
+a{
+    text-decoration: none;
+}

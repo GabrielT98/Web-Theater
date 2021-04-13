@@ -3,13 +3,20 @@
     <head>
         <title>WebTheater</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
         
 
     </head>
     <body>
-        <h1>Bem Vindo ao WebTheater</h1>
+        <h1>Bem Vindo ao WebTheater sugwcui</h1>
         <h2>Assista o video da categoria que desejar!</h2>
+        {% for categoria in categorias %}
+            <h3>{{categoria.getTitulo()}}</h3>
+            {% for video in categoria.getVideos() %}
+                <p><a href="{{url_for('videos', id= video.getId())}}"> {{video.getTitulo()}}</a></p>
+            {% endfor %}
+        {% endfor %}
+
 
     </body>
 </html>

@@ -1,5 +1,6 @@
 class Video():
     def __init__(self):
+        self.id = None
         self.urlVideo = None
         self.urlCapa = None
         self.titulo = None
@@ -9,6 +10,10 @@ class Video():
         self.visualizacoes = None
         self.curtidas = None
 
+    def setId(self,id):
+        self.id = id
+    def getId(self):
+        return self.id
     def setUrlVideo(self,urlVideo):
         self.urlVideo = urlVideo
     def getUrlVideo(self):
@@ -25,7 +30,7 @@ class Video():
 
     def getTitulo(self):
         return self.titulo
-        
+
     def setCategoria(self,categoria):
         self.categoria = categoria
     def getCategoria(self):
