@@ -1,0 +1,14 @@
+
+body{
+    background-color: burlywood;
+}
+iframe{
+    width: 500px;
+    height: 350px;
+    margin-left: 400px;
+}
+
+.curtir{
+    padding: 20px;
+    text-decoration: none;
+}

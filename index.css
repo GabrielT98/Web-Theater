@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    background-image: url("../img/backgroud.jpg");
+    background-size: auto;
+}
+
+h1{
+    color: white;
+    font-family: Arial;
+    font-size: 35px;
+    
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-size:  30px;
+    font-family: Arial;
+
+    text-align: center;
+}
+p{
+    color: white;
+    font-size:  30px;
+    font-family: Arial;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+a:hover{
+    color: grey;
+}

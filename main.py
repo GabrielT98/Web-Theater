@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 import os
 from application.model.entily.categoria import Categoria
 from application.model.entily.video import Video
@@ -80,7 +80,7 @@ categorias =[]
 categorias.append(categoria1)
 categorias.append(categoria2)
 
-
+'''
 print(categoria2.getId())
 print(categoria2.getTitulo())
 print(categoria2.getDescricao())
@@ -90,15 +90,26 @@ for categoria in categorias:
     for video in categoria.getVideos():
         print(video.getTitulo())
 
-
+'''
 @app.route('/')
 def home():
     return render_template("index.html",categorias = categorias )
 
-@app.route("/video/<id>")
-def videos(id):
-    for categoria in categorias :
-        for video in categoria.getVideos():
-            if str(video.getId) == id:
-                return render_template("videos.html", video = video)
-    return render_template("home.html",categorias = categorias)
+@app.route('/video1')
+
+def video1():
+    return render_template("video1.html")
+@app.route('/video2')
+def video2():
+    return render_template("video2.html")
+
+@app.route('/video3')
+def video3():
+    return render_template("video3.html")
+@app.route('/video4')
+def video4():
+    return render_template("video4.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
